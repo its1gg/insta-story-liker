@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة الأزرار والكونسول</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>إضافة Console Buttons</h2>
+
+    <div class="button-container">
+        <button id="btn1" class="custom-btn btn-blue">🔵 زر 1</button>
+        <div id="progressContainer">
+            <progress id="likeProgress" max="50" value="0"></progress>
+            <span id="likeCount">0 / 50</span>
+        </div>
+        <button id="btn2" class="custom-btn btn-green">🟢 زر 2</button>
+        <button id="btn3" class="custom-btn btn-yellow">🟡 زر 3</button>
+        <button id="btn4" class="custom-btn btn-orange">🟠 زر 4</button>
+        <button id="btn5" class="custom-btn btn-red">🔴 زر 5</button>
+    </div>
+
+    <h3>📜 السجل:</h3>
+    <div id="consoleOutput"></div>
+    <button id="clearConsole" class="custom-btn btn-clear">🗑️ مسح السجل</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Instagram Auto Like Comments",
+    "version": "1.0",
+    "description": "إضافة تقوم بعمل لايك تلقائي لكل التعليقات في بوست إنستقرام عند فتحه",
+    "icons": {
+        "128": "icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["https://www.instagram.com/*"]
+}

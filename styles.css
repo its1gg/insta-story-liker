@@ -1,0 +1,79 @@
+/* إعدادات عامة */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    width: 320px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* تصميم الأزرار */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.custom-btn {
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.custom-btn:hover {
+    transform: scale(1.05);
+}
+
+.custom-btn:active {
+    transform: scale(0.95);
+}
+
+/* ألوان الأزرار */
+.btn-blue { background: #007BFF; color: white; }
+.btn-green { background: #28A745; color: white; }
+.btn-yellow { background: #FFC107; color: black; }
+.btn-orange { background: #FD7E14; color: white; }
+.btn-red { background: #DC3545; color: white; }
+.btn-clear { background: #6C757D; color: white; }
+
+/* تصميم الكونسول */
+#consoleOutput {
+    background: #111;
+    color: #0f0;
+    font-family: monospace;
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+    border-radius: 5px;
+    text-align: left;
+    white-space: pre-wrap;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+#progressContainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+progress {
+    width: 100%;
+    height: 15px;
+}
+
+#likeCount {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
