@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("btn2").addEventListener("click", () => {
         logToConsole("🟢 زر 2 تم الضغط عليه!");
-        chrome.scripting.executeScript({
-            target: { allFrames: true },
-            func: () => console.log("🟢 تنفيذ كود زر 2 في صفحة الويب!")
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.scripting.executeScript({
+                target: { tabId: tabs[0].id },
+                files: ["insta-story-liker.js"]
+            });
         });
     });
 

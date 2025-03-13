@@ -1,4 +1,4 @@
-const repeatCount = 5; // عدد التكرارات (يمكنك تغييره)
+const repeatCount = 30; // عدد التكرارات (يمكنك تغييره)
 let currentCount = 0; // عداد التكرار
 
 function performAction() {
