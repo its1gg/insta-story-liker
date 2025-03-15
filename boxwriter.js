@@ -6,3 +6,9 @@ if (textarea) {
 } else {
     console.log("لم يتم العثور على العنصر المطلوب!");
 }
+
+
+const directButton = document.querySelector('[aria-label="Direct"]');
+
+
+
