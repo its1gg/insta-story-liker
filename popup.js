@@ -43,9 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("btn4").addEventListener("click", () => {
         logToConsole("🟠 زر 4 تم الضغط عليه!");
-        chrome.scripting.executeScript({
-            target: { allFrames: true },
-            func: () => console.log("🟠 تنفيذ كود زر 4 في صفحة الويب!")
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.scripting.executeScript({
+                target: { tabId: tabs[0].id },
+                files: ["autofollow.js"]
+            });
         });
     });
 
