@@ -8,19 +8,17 @@
 
         const likeButtons = document.querySelectorAll('svg[aria-label="Like"]');
 
-        if (likeButtons.length <= 12) {
-            console.log(`❌ لم يتم العثور على أزرار كافية! إعادة المحاولة بعد 1 ثانية...`);
+        if (likeButtons.length === 0) {
+            console.log(`❌ لم يتم العثور على أزرار لايك! إعادة المحاولة بعد 1 ثانية...`);
             setTimeout(() => findAndClickLikes(attempt + 1), 1000); // إعادة البحث بعد 1 ثانية
             return;
         }
 
-        console.log(`✅ تم العثور على ${likeButtons.length} زر لايك! (تخطي أول 12 زر)`);
+        console.log(`✅ تم العثور على ${likeButtons.length} زر لايك!`);
 
         let successCount = 0;
 
         likeButtons.forEach((svg, index) => {
-            if (index < 12) return; // تخطي أول 12 زر لايك
-
             setTimeout(() => {
                 try {
                     let parentButton = svg.closest("button"); // البحث عن أقرب زر button
@@ -47,7 +45,7 @@
                 } catch (error) {
                     console.log(`❌ خطأ أثناء محاولة اللايك: ${error}`);
                 }
-            }, (index - 12) * getRandomDelay(2000, 3000)); // تأخير عشوائي بين 1 - 2 ثانية بين كل ضغطة
+            }, index * getRandomDelay(2000, 3000)); // تأخير عشوائي بين 2 - 3 ثوانٍ بين كل ضغطة
         });
     }
 
